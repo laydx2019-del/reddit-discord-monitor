@@ -1,0 +1,9 @@
+services:
+  reddit-monitor:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - reddit_monitor_data:/data
+volumes:
+  reddit_monitor_data:
